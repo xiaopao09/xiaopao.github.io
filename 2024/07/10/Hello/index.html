@@ -29,29 +29,7 @@
         <hr>
     </div>
     <div class="post-content">
-        <h2 id="704-二分查找"><a href="#704-二分查找" class="headerlink" title="[704]二分查找"></a>[704]二分查找</h2><h3 id="JS【左闭右闭】"><a href="#JS【左闭右闭】" class="headerlink" title="JS【左闭右闭】"></a><strong>JS</strong>【左闭右闭】</h3><pre><code>/**
-* @param &#123;number[]&#125; nums
-* @param &#123;number&#125; target
-* @return &#123;number&#125;
-*/
-ar search = function(nums, target) &#123;
- var left = 0
- var right = nums.length - 1
- var middle
- while(left &lt;= right)&#123;
-   middle = Math.floor((left + right) / 2)
-   console.log(nums[middle])
-   if(target &lt; nums[middle])&#123;
-     right = middle - 1
-   &#125;else if(target &gt; nums[middle])&#123;
-     left = middle + 1
-   &#125;else&#123;
-     return middle
-   &#125;
- &#125;
- return -1
-&#125;
-</code></pre>
+        <h2 id="704-二分查找"><a href="#704-二分查找" class="headerlink" title="[704]二分查找"></a>[704]二分查找</h2><h3 id="JS【左闭右闭】"><a href="#JS【左闭右闭】" class="headerlink" title="JS【左闭右闭】"></a><strong>JS</strong>【左闭右闭】</h3>  <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> &#123;<span class="type">number[]</span>&#125; <span class="variable">nums</span></span></span><br><span class="line"><span class="comment">* <span class="doctag">@param</span> &#123;<span class="type">number</span>&#125; <span class="variable">target</span></span></span><br><span class="line"><span class="comment">* <span class="doctag">@return</span> &#123;<span class="type">number</span>&#125;</span></span><br><span class="line"><span class="comment">*/</span></span><br><span class="line">ar search = <span class="keyword">function</span>(<span class="params">nums, target</span>) &#123;</span><br><span class="line"> <span class="keyword">var</span> left = <span class="number">0</span></span><br><span class="line"> <span class="keyword">var</span> right = nums.<span class="property">length</span> - <span class="number">1</span></span><br><span class="line"> <span class="keyword">var</span> middle</span><br><span class="line"> <span class="keyword">while</span>(left &lt;= right)&#123;</span><br><span class="line">   middle = <span class="title class_">Math</span>.<span class="title function_">floor</span>((left + right) / <span class="number">2</span>)</span><br><span class="line">   <span class="variable language_">console</span>.<span class="title function_">log</span>(nums[middle])</span><br><span class="line">   <span class="keyword">if</span>(target &lt; nums[middle])&#123;</span><br><span class="line">     right = middle - <span class="number">1</span></span><br><span class="line">   &#125;<span class="keyword">else</span> <span class="keyword">if</span>(target &gt; nums[middle])&#123;</span><br><span class="line">     left = middle + <span class="number">1</span></span><br><span class="line">   &#125;<span class="keyword">else</span>&#123;</span><br><span class="line">     <span class="keyword">return</span> middle</span><br><span class="line">   &#125;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="keyword">return</span> -<span class="number">1</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="Python【左闭右开】"><a href="#Python【左闭右开】" class="headerlink" title="Python【左闭右开】"></a><strong>Python</strong>【左闭右开】</h3><pre><code>class Solution(object):
   def search(self, nums, target):
       &quot;&quot;&quot;
