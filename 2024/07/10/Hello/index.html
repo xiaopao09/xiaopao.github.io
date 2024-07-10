@@ -24,12 +24,54 @@
     <a href="/index.html"><i class="fa fa-reply replay-btn" aria-hidden="true"></i></a>
     <div class="post-title">
         <p>
-            算法
+            算法练习
         </p>
         <hr>
     </div>
     <div class="post-content">
-        <h1 id="二分法"><a href="#二分法" class="headerlink" title="二分法"></a>二分法</h1><h2 id="题目1"><a href="#题目1" class="headerlink" title="题目1"></a>题目1</h2><span id="more"></span>
+        <h2 id="704-二分查找"><a href="#704-二分查找" class="headerlink" title="[704]二分查找"></a>[704]二分查找</h2><h3 id="JS【左闭右闭】"><a href="#JS【左闭右闭】" class="headerlink" title="JS【左闭右闭】"></a><strong>JS</strong>【左闭右闭】</h3><pre><code>/**
+* @param &#123;number[]&#125; nums
+* @param &#123;number&#125; target
+* @return &#123;number&#125;
+*/
+ar search = function(nums, target) &#123;
+ var left = 0
+ var right = nums.length - 1
+ var middle
+ while(left &lt;= right)&#123;
+   middle = Math.floor((left + right) / 2)
+   console.log(nums[middle])
+   if(target &lt; nums[middle])&#123;
+     right = middle - 1
+   &#125;else if(target &gt; nums[middle])&#123;
+     left = middle + 1
+   &#125;else&#123;
+     return middle
+   &#125;
+ &#125;
+ return -1
+&#125;
+</code></pre>
+<h3 id="Python【左闭右开】"><a href="#Python【左闭右开】" class="headerlink" title="Python【左闭右开】"></a><strong>Python</strong>【左闭右开】</h3><pre><code>class Solution(object):
+  def search(self, nums, target):
+      &quot;&quot;&quot;
+      :type nums: List[int]
+      :type target: int
+      :rtype: int
+      &quot;&quot;&quot;
+      left = 0
+      right = len(nums)
+      while left &lt; right:
+          middle = (left + right) / 2
+          if target &lt; nums[middle]:          
+              right = middle - 1
+          elif target &gt; nums[middle]:
+              left = middle + 1
+          else:
+              return middle
+      return -1
+</code></pre>
+<span id="more"></span>
 
     </div>
 
